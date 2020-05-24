@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
+import Metadata from '../components/Metadata';
 import Image from '../components/image';
-import SEO from '../components/seo';
 
 const IndexPage = (): JSX.Element => (
-  <Layout>
-    <SEO title="Moussa Iskounene" />
+  <Layout siteTitle="Moussa Iskounene">
+    <Metadata title="Moussa" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { IMetaSEO } from '../../types/data';
+import { IMetaSEO } from '../../../types/data';
 
 interface IDefaultProps {
   meta: IMetaSEO[];
@@ -14,7 +14,7 @@ interface IProps extends IDefaultProps {
   description?: string;
 }
 
-function SEO({ description, lang, meta, title }: IProps): JSX.Element {
+function Metadata({ description, lang, meta, title }: IProps): JSX.Element {
   const { site } = useStaticQuery(query);
 
   const metaDescription = description || site.siteMetadata.description;
@@ -81,6 +81,6 @@ const defaultProps: IDefaultProps = {
   meta: [],
 };
 
-SEO.defaultProps = defaultProps;
+Metadata.defaultProps = defaultProps;
 
-export default SEO;
+export default Metadata;

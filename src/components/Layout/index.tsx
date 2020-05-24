@@ -6,23 +6,18 @@
  */
 
 import React, { Fragment } from 'react';
-import Header from './header';
+import Header from '../Header';
 
 interface IProps {
+  siteTitle: string;
   children: JSX.Element[];
 }
 
-function Layout({ children }: IProps): JSX.Element {
+function Layout({ siteTitle, children }: IProps): JSX.Element {
   return (
     <Fragment>
-      <Header siteTitle={`Bienvenue sur le site`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Header siteTitle={siteTitle} />
+      <div>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
