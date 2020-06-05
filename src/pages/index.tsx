@@ -7,11 +7,11 @@ import Image from '../components/Image';
 
 const IndexPage = (): JSX.Element => (
   <Layout>
-    <Metadata title="Moussa" />
+    <Metadata title="Moussa Iskounene | Développeur Web" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <div style={{ maxWidth: `300px` }}>
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link>

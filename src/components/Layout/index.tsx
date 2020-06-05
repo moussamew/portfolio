@@ -7,6 +7,7 @@
 
 import React, { Fragment } from 'react';
 import Header from '../Header';
+import Footer from '../Footer';
 
 interface IProps {
   children: JSX.Element[];
@@ -18,11 +19,7 @@ function Layout({ children }: IProps): JSX.Element {
       <Header />
       <div>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     </Fragment>
   );

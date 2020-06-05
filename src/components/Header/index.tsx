@@ -1,17 +1,20 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import { headerLinks } from '../../data/links';
+import { H3 } from '../../atomic/Heading';
 
-const Header = (): JSX.Element => (
-  <header>
-    <div>
-      {headerLinks.map(link => (
-        <h1 key={link.id}>
-          <Link to="/">{link.title}</Link>
-        </h1>
-      ))}
-    </div>
-  </header>
-);
+function Header(): JSX.Element {
+  return (
+    <header>
+      <div>
+        {headerLinks.map((link) => (
+          <H3 key={link.id}>
+            <Link to={link.page}>{link.title}</Link>
+          </H3>
+        ))}
+      </div>
+    </header>
+  );
+}
 
 export default Header;
