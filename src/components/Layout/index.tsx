@@ -9,14 +9,13 @@ import React, { Fragment } from 'react';
 import Header from '../Header';
 
 interface IProps {
-  siteTitle: string;
   children: JSX.Element[];
 }
 
-function Layout({ siteTitle, children }: IProps): JSX.Element {
+function Layout({ children }: IProps): JSX.Element {
   return (
     <Fragment>
-      <Header siteTitle={siteTitle} />
+      <Header />
       <div>
         <main>{children}</main>
         <footer>
