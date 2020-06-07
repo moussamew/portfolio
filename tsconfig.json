@@ -9,7 +9,9 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "noUnusedLocals": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "rootDir": "src"
   },
   "include": ["./src/**/*"],
   "exclude": ["node_modules", "public", ".cache"]

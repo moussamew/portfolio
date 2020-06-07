@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import tw from 'tailwind.macro';
 import Link from '../../atomic/Link';
 import { headerLinks } from '../../data/links';
 import Wrapper from '../../atomic/Wrapper';
 import { H2 } from '../../atomic/Heading';
 
 const Container = styled.header`
-  display: flex;
-  flex-direction: row;
+  ${tw`flex`};
   margin-top: 30px;
 `;
 

@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import tw from 'tailwind.macro';
 
 interface IProps {
   children: JSX.Element;
 }
 
 const WidthContent = styled.div`
-  margin: 0 auto;
+  ${tw`m-auto`};
   max-width: 1220px;
 `;
 

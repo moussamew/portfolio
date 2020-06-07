@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { IMetaSEO } from '../../../types/data';
+import { IMetaSEO } from '../../types/data';
 
 interface IDefaultProps {
   meta: IMetaSEO[];
