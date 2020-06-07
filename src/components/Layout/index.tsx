@@ -1,11 +1,6 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React, { Fragment } from 'react';
+import GlobalStyle from '../../assets/styles/globalStyle';
+import '../../assets/styles/fonts.css';
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -21,6 +16,7 @@ function Layout({ children }: IProps): JSX.Element {
         <main>{children}</main>
         <Footer />
       </div>
+      <GlobalStyle />
     </Fragment>
   );
 }

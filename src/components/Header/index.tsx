@@ -1,19 +1,27 @@
-import { Link } from 'gatsby';
 import React from 'react';
+import styled from 'styled-components';
+import Link from '../../atomic/Link';
 import { headerLinks } from '../../data/links';
-import { H3 } from '../../atomic/Heading';
+import Wrapper from '../../atomic/Wrapper';
+import { H2 } from '../../atomic/Heading';
+
+const Container = styled.header`
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+`;
 
 function Header(): JSX.Element {
   return (
-    <header>
-      <div>
+    <Wrapper>
+      <Container>
         {headerLinks.map((link) => (
-          <H3 key={link.id}>
-            <Link to={link.page}>{link.title}</Link>
-          </H3>
+          <H2 key={link.id}>
+            <Link page={link.page} content={link.title} />
+          </H2>
         ))}
-      </div>
-    </header>
+      </Container>
+    </Wrapper>
   );
 }
 

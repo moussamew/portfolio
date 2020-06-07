@@ -7,6 +7,8 @@ interface IProps {
 
 const Heading = styled.h1<{ fontSize: number }>`
   font-size: ${(props) => `${props.fontSize}rem`};
+  font-family: 'Roboto';
+  font-weight: 400;
 `;
 
 const H1 = ({ children }: IProps) => <Heading fontSize={3}>{children}</Heading>;

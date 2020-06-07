@@ -7,23 +7,23 @@ interface ILink {
 const headerLinks: ILink[] = [
   {
     id: 0,
-    title: 'miskounene.com',
+    title: 'Accueil',
     page: '/',
   },
   {
     id: 1,
-    title: 'Créations',
-    page: '/creations',
+    title: 'Projets',
+    page: '/projects',
   },
   {
     id: 2,
-    title: 'Réflexions',
-    page: '/reflexions',
+    title: 'Articles',
+    page: '/blog',
   },
   {
     id: 3,
-    title: `Un peu d'histoire`,
-    page: '/histoire',
+    title: `Parcours`,
+    page: '/story',
   },
 ];
 
