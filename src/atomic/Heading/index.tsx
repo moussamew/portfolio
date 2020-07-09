@@ -2,13 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
+const { colors } = require('../../../tailwind');
+
 interface IProps {
   children: JSX.Element | string;
   noMargin?: boolean;
 }
 
 const Heading = styled.h1<{ fontSize: number; noMargin?: boolean }>`
-  ${tw`font-roboto font-thin`}
+  ${tw`font-roboto`}
+  color: ${colors.black};
   font-size: ${(props) => `${props.fontSize}rem`};
   margin: ${(props) => props.noMargin && `0`};
 `;

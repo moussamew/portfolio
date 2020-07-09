@@ -8,7 +8,7 @@ interface IProps {
 
 const WidthContent = styled.div`
   ${tw`m-auto`};
-  max-width: 1220px;
+  max-width: 1180px;
 `;
 
 const Wrapper = ({ children }: IProps): JSX.Element => (

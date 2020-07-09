@@ -16,7 +16,7 @@ const TextContent = styled.div`
 const Welcome = (): JSX.Element => (
   <Container>
     <H1 noMargin>Moussa,</H1>
-    <H1 noMargin>Développeur Frontend.</H1>
+    <H1 noMargin>Software Developer.</H1>
     <TextContent>
       <Text>
         Salut moi c&apos;est Moussa, développeur d’applications web et mobile.
@@ -28,7 +28,7 @@ const Welcome = (): JSX.Element => (
         articles autour de l&apos;écosystème <strong>JavaScript</strong> ainsi
         que des bonnes pratiques de développement.
       </Text>
-      <Button content="Découvrir quelques projets" />
+      {/*   <Button content="Découvrir quelques projets" /> */}
     </TextContent>
   </Container>
 );

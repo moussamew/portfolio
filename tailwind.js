@@ -23,7 +23,7 @@ const colors = {
   green: '#2ecc71',
 
   white: '#FFFFFF',
-  black: '#4a4b55',
+  black: '#353535',
   blackDark: '#2B2C31',
 };
 

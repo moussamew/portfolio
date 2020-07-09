@@ -17,13 +17,14 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5em;
     margin: unset;
     font-family: "Open Sans";
+    font-weight: normal;
     @media (min-width: 768px) {
       font-size: 1.8rem;
     }
   }
 
   strong {
-    color: ${colors.blue};
+    color: ${colors.blueDark};
     font-weight: normal;
   }
   

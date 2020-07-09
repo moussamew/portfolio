@@ -5,7 +5,7 @@ import Wrapper from '../atomic/Wrapper';
 import Welcome from './index/Welcome';
 
 function IndexPage(): JSX.Element {
-  const title = `Portfolio de Moussa Iskounene, développeur d'applications web & mobiles.`;
+  const title = `Moussa Iskounene`;
 
   return (
     <Layout>

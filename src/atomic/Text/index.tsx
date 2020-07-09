@@ -7,7 +7,7 @@ interface IProps {
 }
 
 const StyledText = styled.p`
-  ${tw`font-openSans font-thin mt-2`}
+  ${tw`font-openSans mt-2`}
 `;
 
 const Text = ({ children }: IProps): JSX.Element => (

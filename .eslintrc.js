@@ -33,6 +33,7 @@ module.exports = {
     sourceType: 'module', // Allows for the use of imports
   },
   rules: {
+    'react/jsx-fragments': [2, 'element'],
     'react/prop-types': 'off', // Disable prop-types as we use TypeScript for type checking
     'prettier/prettier': ['error', prettierOptions], // Enhance prettier with custom options
     '@typescript-eslint/no-var-requires': 'off', // Disable this rule to make require ES5 imports
