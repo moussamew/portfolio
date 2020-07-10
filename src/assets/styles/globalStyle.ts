@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+
 const { colors } = require('../../../tailwind');
 
 const GlobalStyle = createGlobalStyle`

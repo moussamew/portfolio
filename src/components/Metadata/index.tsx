@@ -14,6 +14,17 @@ interface IProps extends IDefaultProps {
   description?: string;
 }
 
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+        author
+      }
+    }
+  }
+`;
+
 function Metadata({ description, lang, meta, title }: IProps): JSX.Element {
   const { site } = useStaticQuery(query);
 
@@ -64,17 +75,6 @@ function Metadata({ description, lang, meta, title }: IProps): JSX.Element {
     />
   );
 }
-
-const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        description
-        author
-      }
-    }
-  }
-`;
 
 const defaultProps: IDefaultProps = {
   lang: '',

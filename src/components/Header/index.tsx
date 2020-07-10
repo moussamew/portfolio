@@ -32,8 +32,8 @@ const NavLinks = styled.div`
  * - Redirect the user to the default mail interface
  * - Contact Moussa's mail address
  */
-function contactWithMail() {
-  location.href = 'mailto:moussa@miskounene.com';
+function contact() {
+  // TODO: Redirect to the page /contact
 }
 
 const Header = (): JSX.Element => {
@@ -46,11 +46,11 @@ const Header = (): JSX.Element => {
         </Flex>
         <NavLinks>
           {headerLinks.map((link) => (
-            <H2 key={link.id}>
+            <H2 key={link.title}>
               <Link page={link.page} content={link.title} />
             </H2>
           ))}
-          <Button action={contactWithMail} icon={Mail} />
+          <Button action={contact} icon={Mail} />
         </NavLinks>
       </Container>
     </Wrapper>

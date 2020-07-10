@@ -13,12 +13,6 @@ import { useStaticQuery, graphql } from 'gatsby';
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = (): JSX.Element => {
-  const { placeholderImage } = useStaticQuery(query);
-
-  return <Img fluid={placeholderImage.childImageSharp.fluid} />;
-};
-
 const query = graphql`
   query {
     placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
@@ -30,5 +24,11 @@ const query = graphql`
     }
   }
 `;
+
+const Image = (): JSX.Element => {
+  const { placeholderImage } = useStaticQuery(query);
+
+  return <Img fluid={placeholderImage.childImageSharp.fluid} />;
+};
 
 export default Image;
