@@ -5,8 +5,9 @@ import Link from '../../atomic/Link';
 import { headerLinks } from '../../data/links';
 import Wrapper from '../../atomic/Wrapper';
 import { H2, H1 } from '../../atomic/Heading';
+import Button from '../../atomic/Button';
 import Logo from '../../assets/images/favicon.png';
-import Contact from './Contact';
+import Mail from '../../assets/images/mail.svg';
 
 const Container = styled.header`
   ${tw`flex justify-between`};
@@ -26,23 +27,34 @@ const NavLinks = styled.div`
   ${tw`flex relative my-auto`}
 `;
 
-const Header = (): JSX.Element => (
-  <Wrapper>
-    <Container>
-      <Flex>
-        <Image src={Logo} />
-        <H1>Moussa Iskounene</H1>
-      </Flex>
-      <NavLinks>
-        {headerLinks.map((link) => (
-          <H2 key={link.id}>
-            <Link page={link.page} content={link.title} />
-          </H2>
-        ))}
-        <Contact />
-      </NavLinks>
-    </Container>
-  </Wrapper>
-);
+/**
+ * @description
+ * - Redirect the user to the default mail interface
+ * - Contact Moussa's mail address
+ */
+function contactWithMail() {
+  location.href = 'mailto:moussa@miskounene.com';
+}
+
+const Header = (): JSX.Element => {
+  return (
+    <Wrapper>
+      <Container>
+        <Flex>
+          <Image src={Logo} />
+          <H1>Moussa Iskounene</H1>
+        </Flex>
+        <NavLinks>
+          {headerLinks.map((link) => (
+            <H2 key={link.id}>
+              <Link page={link.page} content={link.title} />
+            </H2>
+          ))}
+          <Button action={contactWithMail} icon={Mail} />
+        </NavLinks>
+      </Container>
+    </Wrapper>
+  );
+};
 
 export default Header;

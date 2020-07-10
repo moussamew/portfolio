@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { H1 } from '../../atomic/Heading';
 import Text from '../../atomic/Text';
-import Button from '../../atomic/Button';
 
 const Container = styled.div`
   ${tw`mt-10`}
@@ -28,7 +27,6 @@ const Welcome = (): JSX.Element => (
         articles autour de l&apos;écosystème <strong>JavaScript</strong> ainsi
         que des bonnes pratiques de développement.
       </Text>
-      {/*   <Button content="Découvrir quelques projets" /> */}
     </TextContent>
   </Container>
 );
