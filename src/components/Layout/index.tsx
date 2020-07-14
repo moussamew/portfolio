@@ -12,10 +12,8 @@ function Layout({ children }: IProps): JSX.Element {
   return (
     <Fragment>
       <Header />
-      <div>
-        <main>{children}</main>
-        <Footer />
-      </div>
+      <main>{children}</main>
+      <Footer />
       <GlobalStyle />
     </Fragment>
   );

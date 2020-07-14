@@ -6,7 +6,7 @@ import tw from 'tailwind.macro';
 import { H1 } from '../../atomic/Heading';
 import Text from '../../atomic/Text';
 
-const Container = styled.section`
+const Section = styled.section`
   ${tw`mt-10 flex`}
 `;
 
@@ -39,7 +39,7 @@ const Welcome = (): JSX.Element => {
   const { placeholderImage } = useStaticQuery(query);
 
   return (
-    <Container>
+    <Section>
       <Presentation>
         <H1 noMargin>Moussa,</H1>
         <H1 noMargin>Software Developer.</H1>
@@ -58,7 +58,7 @@ const Welcome = (): JSX.Element => {
       <ImageWrapper>
         <Img fluid={placeholderImage.childImageSharp.fluid} />
       </ImageWrapper>
-    </Container>
+    </Section>
   );
 };
 
