@@ -12,10 +12,8 @@ function IndexPage(): JSX.Element {
     <Layout>
       <Metadata title={title} />
       <Wrapper>
-        <div>
-          <Welcome />
-          <Projects />
-        </div>
+        <Welcome />
+        <Projects />
       </Wrapper>
     </Layout>
   );
