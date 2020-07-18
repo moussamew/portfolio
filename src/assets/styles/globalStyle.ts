@@ -24,9 +24,13 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  a {
+    color: ${colors.black};
+    text-decoration: unset;
+  }
+
   strong {
     color: ${colors.blueDark};
-    font-weight: normal;
   }
   
   button {
