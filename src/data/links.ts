@@ -18,5 +18,4 @@ const headerLinks: ILink[] = [
   },
 ];
 
-// eslint-disable-next-line import/prefer-default-export
 export { headerLinks };

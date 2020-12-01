@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import Link from '../../atomic/Link';
@@ -32,14 +32,13 @@ const NavLinks = styled.div`
   ${tw`flex relative my-auto`}
 `;
 
-/**
- * @description
- * - Redirect the user to the default mail interface
- * - Contact Moussa's mail address
- */
-function contact() {
-  // TODO: Redirect to the page /contact
-}
+const Header: FunctionComponent = () => {
+  /**
+   * @description Contact Moussa's mail address
+   */
+  const onContact = (): void => {
+    window.location.href = 'mailto:moussa.iskounene@gmail.com';
+  };
 
 const Header = (): JSX.Element => (
   <Wrapper>
