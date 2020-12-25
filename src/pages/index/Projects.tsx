@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { H1 } from '../../atomic/Heading';
-import { IRepository } from '../../types/node';
+import { Repository } from '../../types/node';
 
 const { colors } = require('../../../tailwind');
 
@@ -55,10 +55,10 @@ const query = graphql`
   }
 `;
 
-const Projects = (): JSX.Element => {
+const Projects: FunctionComponent = () => {
   const {
     githubRepos: { repos },
-  }: { githubRepos: { repos: IRepository[] } } = useStaticQuery(query);
+  }: { githubRepos: { repos: Repository[] } } = useStaticQuery(query);
 
   const repositories = repos.map((repository) => {
     const { description } = repository;
@@ -75,7 +75,7 @@ const Projects = (): JSX.Element => {
       <H1>Quelques projets</H1>
       <Grid>
         {repositories.map(
-          ({ id, name, description, htmlUrl, emoji }: IRepository) => (
+          ({ id, name, description, htmlUrl, emoji }: Repository) => (
             <Row
               key={`${id}${name}`}
               href={htmlUrl}

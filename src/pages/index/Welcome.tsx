@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
@@ -35,14 +35,13 @@ const query = graphql`
   }
 `;
 
-const Welcome = (): JSX.Element => {
+const Welcome: FunctionComponent = () => {
   const { placeholderImage } = useStaticQuery(query);
 
   return (
     <Section>
       <Presentation>
-        <H1 noMargin>Moussa,</H1>
-        <H1 noMargin>Software Developer.</H1>
+        <H1 noMargin>Hey you! Welcome! 👋 </H1>
         <Text>
           Salut moi c&apos;est Moussa, développeur d’applications web et mobile.
           Je travaille principalement sur <strong>React</strong> et{' '}

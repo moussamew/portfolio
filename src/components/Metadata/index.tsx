@@ -1,16 +1,13 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { IMetaSEO } from '../../types/data';
+import { Meta } from '../../types/data';
 
-interface IDefaultProps {
-  meta: IMetaSEO[];
-  lang: string;
-}
-
-interface IProps extends IDefaultProps {
+interface Props {
   title: string;
+  meta?: Meta[];
+  lang?: string;
   description?: string;
 }
 
@@ -25,7 +22,12 @@ const query = graphql`
   }
 `;
 
-function Metadata({ description, lang, meta, title }: IProps): JSX.Element {
+const Metadata: FunctionComponent<Props> = ({
+  title,
+  lang = '',
+  meta = [],
+  description,
+}) => {
   const { site } = useStaticQuery(query);
 
   const metaDescription = description || site.siteMetadata.description;
@@ -74,13 +76,6 @@ function Metadata({ description, lang, meta, title }: IProps): JSX.Element {
       meta={customMeta.concat(meta)}
     />
   );
-}
-
-const defaultProps: IDefaultProps = {
-  lang: '',
-  meta: [],
 };
-
-Metadata.defaultProps = defaultProps;
 
 export default Metadata;

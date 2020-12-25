@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
@@ -33,20 +33,18 @@ const Image = styled.img`
   height: 22px;
 `;
 
-interface IProps {
+interface Props {
   action: () => void;
   icon?: string;
 }
 
-const Button = ({ icon, action }: IProps): JSX.Element => {
-  return (
-    <StyledButton onClick={action}>
-      <Flex>
-        <Span>Me contacter</Span>
-        {icon && <Image src={icon} />}
-      </Flex>
-    </StyledButton>
-  );
-};
+const Button: FunctionComponent<Props> = ({ icon, action }) => (
+  <StyledButton onClick={action}>
+    <Flex>
+      <Span>Me contacter</Span>
+      {icon && <Image src={icon} />}
+    </Flex>
+  </StyledButton>
+);
 
 export default Button;
