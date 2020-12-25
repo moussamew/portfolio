@@ -45,6 +45,7 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off', // Disable this rule to make require ES5 imports
     'react/jsx-filename-extension': [2, { extensions: ['.tsx'] }], // Only use jsx inside .tsx files
     'import/prefer-default-export': 'off', // Don't warn for single export from a module
+    'react/prop-types': 'off',
     // Use import/extensions workaround to import files with .ts/.tsx extensions
     'import/extensions': [
       'error',

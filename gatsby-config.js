@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Book de Moussa Iskounene',
+        name: 'Moussa Iskounene | Software Engineer',
         short_name: 'miskounene.com',
         start_url: '/',
         background_color: '#663399',
