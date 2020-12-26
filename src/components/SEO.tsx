@@ -2,21 +2,32 @@ import { FunctionComponent } from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { Meta } from '../types/data'
-
 interface Props {
   title: string
-  meta?: Meta[]
   lang?: string
   description?: string
+  image?: string
+}
+
+interface SiteMetadata {
+  site: {
+    siteMetadata: {
+      defaultTitle: string
+      defaultDescription: string
+      defaultImage: string
+      siteUrl: string
+    }
+  }
 }
 
 const query = graphql`
   query {
     site {
       siteMetadata {
-        description
-        author
+        defaultTitle: title
+        defaultDescription: description
+        siteUrl: url
+        defaultImage: image
       }
     }
   }
@@ -25,47 +36,25 @@ const query = graphql`
 const SEO: FunctionComponent<Props> = ({
   title,
   lang = '',
-  meta = [],
   description,
+  image,
 }) => {
-  const { site } = useStaticQuery(query)
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery<SiteMetadata>(query)
 
-  const metaDescription = description || site.siteMetadata.description
+  const {
+    defaultTitle,
+    defaultDescription,
+    defaultImage,
+    siteUrl,
+  } = siteMetadata
 
-  const customMeta = [
-    {
-      name: `description`,
-      content: metaDescription,
-    },
-    {
-      property: `og:title`,
-      content: title,
-    },
-    {
-      property: `og:description`,
-      content: metaDescription,
-    },
-    {
-      property: `og:type`,
-      content: `website`,
-    },
-    {
-      name: `twitter:card`,
-      content: `summary`,
-    },
-    {
-      name: `twitter:creator`,
-      content: site.siteMetadata.author,
-    },
-    {
-      name: `twitter:title`,
-      content: title,
-    },
-    {
-      name: `twitter:description`,
-      content: metaDescription,
-    },
-  ]
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image || defaultImage}`,
+  }
 
   return (
     <Helmet
@@ -73,8 +62,17 @@ const SEO: FunctionComponent<Props> = ({
         lang,
       }}
       title={title}
-      meta={customMeta.concat(meta)}
-    />
+    >
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
+    </Helmet>
   )
 }
 

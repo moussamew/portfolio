@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    description: `I am a software engineer based in Paris, specialized in the creation of web and mobile applications.`,
-    author: 'Moussa Iskounene',
+    site: 'Moussa Iskounene | Software Engineer 👋',
+    description: `I'm a Software Engineer living in Paris who designs web and mobile applications.`,
+    url: 'https://miskounene.com',
+    image: '/miskounene.png',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -32,4 +34,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-};
+}

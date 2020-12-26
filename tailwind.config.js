@@ -12,7 +12,7 @@ module.exports = {
     },
     colors: {
       transparent: 'transparent',
-      body: '#fcfcfe',
+      body: '#FCFCFE',
       blue: '#5EB2F3',
       blueDark: '#1976D2',
       white: '#FFFFFF',
@@ -20,6 +20,7 @@ module.exports = {
       blackDark: '#2B2C31',
       grey: '#7E848F',
       greyLight: '#E1ECFF',
+      yellow: '#F4E464',
     },
     spacing: {
       0: '0',

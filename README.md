@@ -1,7 +1,8 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b999eea9-2da2-499b-bb7d-44c54f976228/deploy-status)](https://app.netlify.com/sites/upbeat-beaver-fb6633/deploys)
+## 🚀 Portfolio using Gatsby
 
-## 🚀 Portfolio using Gatsby.js
+This portfolio _highlights_ a set of information such as my latest experiences, the projects I'm working on
+and some articles about the `JavaScript` ecosystem.
 
-Stacks → **React.js**, **TypeScript**, **Styled-Components**, **TailwindCSS**
- 
-Deployed on **Netlify**
+**Stacks** → `React`, `TypeScript`, `Styled-Components`, `TailwindCSS` and `Gatsby`.
+
+Deployed on **Vercel**!

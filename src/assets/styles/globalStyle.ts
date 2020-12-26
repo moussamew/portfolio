@@ -45,6 +45,10 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     border: none;
   }
+
+  ::selection {
+    ${tw`bg-yellow`}
+  }
 `
 
 export default GlobalStyle

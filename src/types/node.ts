@@ -1,7 +1,7 @@
 export interface Repository {
-  id: number;
-  name: string;
-  description: string;
-  htmlUrl: string;
-  emoji?: string;
+  id: number
+  name: string
+  description: string
+  htmlUrl: string
+  emoji?: string
 }
