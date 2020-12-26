@@ -1,16 +1,16 @@
-import React, { FunctionComponent } from 'react';
-import Img from 'gatsby-image';
-import { useStaticQuery, graphql } from 'gatsby';
-import tw, { styled } from 'twin.macro';
-import { Title, Text } from '../../components';
+import { FunctionComponent } from 'react'
+import Img from 'gatsby-image'
+import { useStaticQuery, graphql } from 'gatsby'
+import tw, { styled } from 'twin.macro'
+import { Title, Text } from '../../components'
 
 const Section = styled.section`
   ${tw`mt-8 flex`};
-`;
+`
 
 const Presentation = styled.div`
   ${tw`w-1/2`};
-`;
+`
 
 const ImageWrapper = styled.div`
   ${tw`flex justify-center w-1/2`};
@@ -18,7 +18,7 @@ const ImageWrapper = styled.div`
   .gatsby-image-wrapper {
     width: 275px;
   }
-`;
+`
 
 const query = graphql`
   query {
@@ -30,10 +30,10 @@ const query = graphql`
       }
     }
   }
-`;
+`
 
 const Welcome: FunctionComponent = () => {
-  const { placeholderImage } = useStaticQuery(query);
+  const { placeholderImage } = useStaticQuery(query)
 
   return (
     <Section>
@@ -55,7 +55,7 @@ const Welcome: FunctionComponent = () => {
         <Img fluid={placeholderImage.childImageSharp.fluid} />
       </ImageWrapper>
     </Section>
-  );
-};
+  )
+}
 
-export default Welcome;
+export default Welcome

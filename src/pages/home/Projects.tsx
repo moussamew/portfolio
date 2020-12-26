@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import tw, { styled } from 'twin.macro'
 import { Repository } from '../../types/node'

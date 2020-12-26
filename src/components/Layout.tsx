@@ -1,4 +1,4 @@
-import React, { Fragment, FunctionComponent } from 'react'
+import { Fragment, FunctionComponent } from 'react'
 import GlobalStyle from '../assets/styles/globalStyle'
 
 interface Props {

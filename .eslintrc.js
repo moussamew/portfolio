@@ -1,9 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 const prettierOptions = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'),
-);
+)
 
 module.exports = {
   parser: '@typescript-eslint/parser', // Specifies the ESLint parser
@@ -47,6 +47,7 @@ module.exports = {
     'import/prefer-default-export': 'off', // Don't warn for single export from a module
     'react/prop-types': 'off',
     'jsx-a11y/accessible-emoji': 'off',
+    'react/react-in-jsx-scope': 'off',
     /* Use import/extensions workaround to import files with .ts/.tsx extensions
     Issue here: https://github.com/benmosher/eslint-plugin-import/issues/1615 */
     'import/extensions': [
@@ -58,4 +59,4 @@ module.exports = {
       },
     ],
   },
-};
+}

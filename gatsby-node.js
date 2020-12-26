@@ -35,3 +35,12 @@ exports.sourceNodes = async ({
 }) => {
   await fetchGithubRepos(createNode, createContentDigest, 'moussamew')
 }
+
+exports.onCreateBabelConfig = ({ actions }) => {
+  actions.setBabelPlugin({
+    name: '@babel/plugin-transform-react-jsx',
+    options: {
+      runtime: 'automatic',
+    },
+  })
+}
