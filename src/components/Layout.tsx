@@ -1,0 +1,15 @@
+import { Fragment, FunctionComponent } from 'react'
+import GlobalStyle from '../assets/styles/globalStyle'
+
+interface Props {
+  children: JSX.Element[]
+}
+
+const Layout: FunctionComponent<Props> = ({ children }) => (
+  <Fragment>
+    <main>{children}</main>
+    <GlobalStyle />
+  </Fragment>
+)
+
+export { Layout }

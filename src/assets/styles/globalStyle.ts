@@ -1,6 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-
-const { colors } = require('../../../tailwind');
+import { createGlobalStyle } from 'styled-components'
+import tw from 'twin.macro'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -11,7 +10,11 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-size: 1.6rem;
-    padding: 0 4rem;
+    padding: 0 2rem;
+
+    @media (min-width: 768px) {
+      padding: 0 4rem;
+    }
   }
 
   p, label, a, span {
@@ -19,18 +22,18 @@ const GlobalStyle = createGlobalStyle`
     margin: unset;
     font-family: "Open Sans";
     font-weight: normal;
+    
     @media (min-width: 768px) {
       font-size: 1.8rem;
     }
   }
 
   a {
-    color: ${colors.black};
     text-decoration: unset;
   }
 
   strong {
-    color: ${colors.blueDark};
+    ${tw`text-blueDark`};
   }
 
   img {
@@ -42,6 +45,10 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     border: none;
   }
-`;
 
-export default GlobalStyle;
+  ::selection {
+    ${tw`bg-yellow`}
+  }
+`
+
+export default GlobalStyle

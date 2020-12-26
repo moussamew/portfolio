@@ -1,22 +1,7 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import Metadata from '../components/Metadata';
-import Wrapper from '../atomic/Wrapper';
-import Welcome from './index/Welcome';
-import Projects from './index/Projects';
+import { FunctionComponent } from 'react'
 
-function IndexPage(): JSX.Element {
-  const title = `Moussa Iskounene`;
+import Home from './home'
 
-  return (
-    <Layout>
-      <Metadata title={title} />
-      <Wrapper>
-        <Welcome />
-        <Projects />
-      </Wrapper>
-    </Layout>
-  );
-}
+const Index: FunctionComponent = () => <Home />
 
-export default IndexPage;
+export default Index

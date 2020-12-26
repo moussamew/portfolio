@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    description: `Je suis Moussa Iskounene, développeur d'applications web & mobile sur les technologies React et React Native.`,
-    author: 'Moussa',
+    site: 'Moussa Iskounene | Software Engineer 👋',
+    description: `I'm a Software Engineer living in Paris who designs web and mobile applications.`,
+    url: 'https://miskounene.com',
+    image: '/miskounene.png',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -17,7 +19,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Book de Moussa Iskounene',
+        name: 'Moussa Iskounene | Software Engineer',
         short_name: 'miskounene.com',
         start_url: '/',
         background_color: '#663399',
@@ -32,4 +34,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-};
+}

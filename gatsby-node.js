@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const fetch = require('node-fetch');
+const fetch = require('node-fetch')
 
 /**
  * Retrieve repositories from GitHub user
@@ -13,9 +13,10 @@ const fetch = require('node-fetch');
  * @param {String} user GitHub Username
  */
 async function fetchGithubRepos(createNode, createContentDigest, user) {
-  const GITHUB_REPOS_URL = `https://api.github.com/users/${user}/repos`;
-  const response = await fetch(GITHUB_REPOS_URL);
-  const responseJSON = await response.json();
+  const GITHUB_REPOS_URL = `https://api.github.com/users/${user}/repos`
+  const response = await fetch(GITHUB_REPOS_URL)
+  const responseJSON = await response.json()
+
   createNode({
     repos: responseJSON,
     id: 'fetchGithubRepos',
@@ -25,12 +26,21 @@ async function fetchGithubRepos(createNode, createContentDigest, user) {
       type: `githubRepos`,
       contentDigest: createContentDigest(responseJSON),
     },
-  });
+  })
 }
 
 exports.sourceNodes = async ({
   actions: { createNode },
   createContentDigest,
 }) => {
-  await fetchGithubRepos(createNode, createContentDigest, 'moussamew');
-};
+  await fetchGithubRepos(createNode, createContentDigest, 'moussamew')
+}
+
+exports.onCreateBabelConfig = ({ actions }) => {
+  actions.setBabelPlugin({
+    name: '@babel/plugin-transform-react-jsx',
+    options: {
+      runtime: 'automatic',
+    },
+  })
+}

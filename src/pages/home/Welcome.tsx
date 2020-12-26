@@ -1,48 +1,47 @@
-import React from 'react';
-import Img from 'gatsby-image';
-import { useStaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
-import tw from 'tailwind.macro';
-import { H1 } from '../../atomic/Heading';
-import Text from '../../atomic/Text';
+import { FunctionComponent } from 'react'
+import Img from 'gatsby-image'
+import { useStaticQuery, graphql } from 'gatsby'
+import tw, { styled } from 'twin.macro'
+import { Title, Text } from '../../components'
 
 const Section = styled.section`
-  ${tw`mt-10 flex`}
-`;
+  ${tw`lg:mt-8 mt-5 
+  flex lg:flex-row flex-col-reverse`};
+`
 
 const Presentation = styled.div`
-  ${tw`w-1/2`}
-`;
+  ${tw`lg:w-1/2 w-full`};
+`
 
 const ImageWrapper = styled.div`
-  ${tw`flex justify-center w-1/2`}
-  display: flex;
+  ${tw`lg:flex lg:w-1/2 justify-center`};
 
-  .gatsby-image-wrapper {
-    width: 275px;
+  @media (min-width: 640px) {
+    .gatsby-image-wrapper { {
+      width: 300px;
+    }
   }
-`;
+`
 
 const query = graphql`
   query {
     placeholderImage: file(relativePath: { eq: "moussa.png" }) {
       childImageSharp {
-        fluid(maxWidth: 275) {
+        fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
         }
       }
     }
   }
-`;
+`
 
-const Welcome = (): JSX.Element => {
-  const { placeholderImage } = useStaticQuery(query);
+const Welcome: FunctionComponent = () => {
+  const { placeholderImage } = useStaticQuery(query)
 
   return (
     <Section>
       <Presentation>
-        <H1 noMargin>Moussa,</H1>
-        <H1 noMargin>Software Developer.</H1>
+        <Title>Hey! Welcome! 👋 </Title>
         <Text>
           Salut moi c&apos;est Moussa, développeur d’applications web et mobile.
           Je travaille principalement sur <strong>React</strong> et{' '}
@@ -59,7 +58,7 @@ const Welcome = (): JSX.Element => {
         <Img fluid={placeholderImage.childImageSharp.fluid} />
       </ImageWrapper>
     </Section>
-  );
-};
+  )
+}
 
-export default Welcome;
+export default Welcome
