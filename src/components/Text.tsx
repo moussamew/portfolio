@@ -14,4 +14,4 @@ const Text: FunctionComponent<Props> = ({ children }) => (
   <StyledText>{children}</StyledText>
 );
 
-export default Text;
+export { Text };

@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
-const { colors } = require('../../../tailwind');
+const { colors } = require('../../tailwind');
 
 interface Props {
   children: JSX.Element | string;
@@ -16,4 +16,4 @@ const H1 = styled.h1`
 
 const Title: FunctionComponent<Props> = ({ children }) => <H1>{children}</H1>;
 
-export default Title;
+export { Title };

@@ -3,8 +3,7 @@ import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import Title from '../../atomic/Heading';
-import Text from '../../atomic/Text';
+import { Title, Text } from '../../components';
 
 const Section = styled.section`
   ${tw`mt-10 flex`};

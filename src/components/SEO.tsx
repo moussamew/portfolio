@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { Meta } from '../../types/data';
+import { Meta } from '../types/data';
 
 interface Props {
   title: string;
@@ -22,7 +22,7 @@ const query = graphql`
   }
 `;
 
-const Metadata: FunctionComponent<Props> = ({
+const SEO: FunctionComponent<Props> = ({
   title,
   lang = '',
   meta = [],
@@ -78,4 +78,4 @@ const Metadata: FunctionComponent<Props> = ({
   );
 };
 
-export default Metadata;
+export { SEO };

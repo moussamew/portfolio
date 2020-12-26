@@ -15,4 +15,4 @@ const Wrapper: FunctionComponent = ({ children }) => (
   <WidthContent>{children}</WidthContent>
 );
 
-export default Wrapper;
+export { Wrapper };

@@ -1,6 +1,6 @@
 import React, { Fragment, FunctionComponent } from 'react';
-import GlobalStyle from '../../assets/styles/globalStyle';
-import '../../assets/styles/fonts.css';
+import GlobalStyle from '../assets/styles/globalStyle';
+import '../assets/styles/fonts.css';
 
 interface Props {
   children: JSX.Element[];
@@ -13,4 +13,4 @@ const Layout: FunctionComponent<Props> = ({ children }) => (
   </Fragment>
 );
 
-export default Layout;
+export { Layout };

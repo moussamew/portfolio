@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
-const { colors } = require('../../../tailwind');
+const { colors } = require('../../tailwind');
 
 const StyledButton = styled.button`
   ${tw`m-auto shadow-md pointer px-2`};
@@ -51,4 +51,4 @@ const Button: FunctionComponent<Props> = ({ action, text, icon }) => (
   </StyledButton>
 );
 
-export default Button;
+export { Button };
