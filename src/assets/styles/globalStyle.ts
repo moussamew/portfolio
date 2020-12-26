@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import tw from 'twin.macro';
+import { createGlobalStyle } from 'styled-components'
+import tw from 'twin.macro'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -10,7 +10,11 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-size: 1.6rem;
-    padding: 0 4rem;
+    padding: 0 2rem;
+
+    @media (min-width: 768px) {
+      padding: 0 4rem;
+    }
   }
 
   p, label, a, span {
@@ -18,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
     margin: unset;
     font-family: "Open Sans";
     font-weight: normal;
+    
     @media (min-width: 768px) {
       font-size: 1.8rem;
     }
@@ -40,6 +45,6 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     border: none;
   }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle
