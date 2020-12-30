@@ -18,7 +18,7 @@ const ImageWrapper = styled.div`
   ${tw`lg:flex lg:w-1/2 justify-center mt-2`}
 
   @media (min-width: 640px) {
-    .gatsby-image-wrapper { {
+    .gatsby-image-wrapper {
       width: 350px;
     }
   }
@@ -28,7 +28,7 @@ const query = graphql`
   query {
     placeholderImage: file(relativePath: { eq: "moussa.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
+        fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

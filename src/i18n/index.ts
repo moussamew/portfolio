@@ -20,6 +20,7 @@ i18n.use(LanguageDetector).init({
   },
   react: {
     useSuspense: false,
+    wait: true,
   },
   detection: {
     order: ['localStorage'],

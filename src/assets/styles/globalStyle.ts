@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   img {
-    border-radius: 1.5rem;
+    border-radius: 0.5rem;
   }
   
   button {
