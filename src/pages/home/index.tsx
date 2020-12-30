@@ -3,12 +3,12 @@ import { FunctionComponent } from 'react'
 import { Layout } from '../../components'
 
 import Welcome from './Welcome'
-import Projects from './Projects'
+import Experiences from './Experiences'
 
 const Home: FunctionComponent = () => (
   <Layout>
     <Welcome />
-    <Projects />
+    <Experiences />
   </Layout>
 )
 

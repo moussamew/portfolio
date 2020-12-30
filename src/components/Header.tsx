@@ -22,7 +22,7 @@ const Header: FunctionComponent = () => {
   return (
     <header>
       <SwitchLanguage type="button" onClick={changeCurrentLanguage}>
-        <LanguageIcon fill="currentColor" tw="mb-1 mr-0.5" />
+        <LanguageIcon fill="currentColor" tw="mb-1 mr-1" />
         <Text>{t('header.language')}</Text>
       </SwitchLanguage>
     </header>
