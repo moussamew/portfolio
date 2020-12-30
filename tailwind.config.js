@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [],
+  purge: ['./src/**/*.{ts,tsx}'],
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -24,6 +24,7 @@ module.exports = {
     },
     spacing: {
       0: '0',
+      0.5: '0.5rem',
       1: '1rem',
       2: '2rem',
       3: '3rem',

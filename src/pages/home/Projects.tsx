@@ -1,8 +1,9 @@
-import { FunctionComponent } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { FunctionComponent } from 'react'
 import tw, { styled } from 'twin.macro'
-import { Repository } from '../../types/node'
+
 import { Subtitle } from '../../components'
+import { Repository } from '../../types/node'
 
 const Section = styled.section`
   ${tw`flex flex-col`}

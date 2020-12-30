@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "noUnusedLocals": false,
     "skipLibCheck": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "rootDir": "src"
   },

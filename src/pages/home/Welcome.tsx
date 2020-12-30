@@ -1,24 +1,25 @@
-import { FunctionComponent } from 'react'
-import Img from 'gatsby-image'
 import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { FunctionComponent } from 'react'
+import { useTranslation } from 'react-i18next'
 import tw, { styled } from 'twin.macro'
-import { Title, Text } from '../../components'
+
+import { Title, TextWithTags } from '../../components'
 
 const Section = styled.section`
-  ${tw`lg:mt-8 mt-5 
-  flex lg:flex-row flex-col-reverse`};
+  ${tw`flex lg:flex-row flex-col-reverse`}
 `
 
-const Presentation = styled.div`
-  ${tw`lg:w-1/2 w-full`};
+const Introduction = styled.div`
+  ${tw`lg:w-1/2 w-full`}
 `
 
 const ImageWrapper = styled.div`
-  ${tw`lg:flex lg:w-1/2 justify-center`};
+  ${tw`lg:flex lg:w-1/2 justify-center mt-2`}
 
   @media (min-width: 640px) {
-    .gatsby-image-wrapper { {
-      width: 300px;
+    .gatsby-image-wrapper {
+      width: 350px;
     }
   }
 `
@@ -27,7 +28,7 @@ const query = graphql`
   query {
     placeholderImage: file(relativePath: { eq: "moussa.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
+        fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -37,23 +38,23 @@ const query = graphql`
 
 const Welcome: FunctionComponent = () => {
   const { placeholderImage } = useStaticQuery(query)
+  const { t } = useTranslation()
 
   return (
     <Section>
-      <Presentation>
-        <Title>Hey! Welcome! 👋 </Title>
-        <Text>
-          Salut moi c&apos;est Moussa, développeur d’applications web et mobile.
-          Je travaille principalement sur <strong>React</strong> et{' '}
-          <strong>React Native</strong>.
-        </Text>
-        <Text>
-          Vous trouverez sur ce portfolio l&apos;ensemble de mes projets,
-          quelques articles autour de l&apos;écosystème{' '}
-          <strong>JavaScript</strong> ainsi que des bonnes pratiques de
-          développement.
-        </Text>
-      </Presentation>
+      <Introduction>
+        <Title>{t('home.welcome.title')}</Title>
+        <TextWithTags i18nKey="home.welcome.description1">
+          Hello, my name is Moussa, I am 24 years old and I live in Paris. I am
+          currently working at <strong>CANAL+</strong> in the Front TV team as a
+          <strong>Front-end Developer.</strong>
+        </TextWithTags>
+        <TextWithTags i18nKey="home.welcome.description2">
+          In my free time, I design web and mobile applications. I mainly work
+          around the <strong>JavaScript</strong> ecosystem and make most of my
+          applications in <strong>TypeScript.</strong>
+        </TextWithTags>
+      </Introduction>
       <ImageWrapper>
         <Img fluid={placeholderImage.childImageSharp.fluid} />
       </ImageWrapper>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    site: 'Moussa Iskounene | Software Engineer 👋',
+    title: 'Moussa Iskounene | Software Engineer 👋',
     description: `I'm a Software Engineer living in Paris who designs web and mobile applications.`,
     url: 'https://miskounene.com',
     image: '/miskounene.png',
@@ -30,6 +30,14 @@ module.exports = {
     },
     'gatsby-plugin-typescript',
     'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

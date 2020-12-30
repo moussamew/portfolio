@@ -1,0 +1,17 @@
+{
+  "translation": {
+    "header": {
+      "language": "English"
+    },
+    "home": {
+      "welcome": {
+        "title": "Hey! Welcome! 👋",
+        "description1": "Hello, my name is Moussa, I am 24 years old and I live in Paris. I am currently working at <strong>CANAL+</strong> in the Front TV team as a <strong>Front-end Developer.</strong>",
+        "description2": "In my free time, I design web and mobile applications. I mainly work around the <strong>JavaScript</strong> ecosystem and make most of my applications in <strong>TypeScript.</strong>"
+      },
+      "experiences": {
+        "subtitle": "Experiences"
+      }
+    }
+  }
+}

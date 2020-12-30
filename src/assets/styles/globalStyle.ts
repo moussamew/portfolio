@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p, label, a, span {
-    line-height: 1.5em;
+    line-height: 1.6em;
     margin: unset;
     font-family: "Open Sans";
     font-weight: normal;
@@ -32,18 +32,16 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: unset;
   }
 
-  strong {
-    ${tw`text-blueDark`};
-  }
-
   img {
-    border-radius: 1.5rem;
+    border-radius: 0.5rem;
   }
   
   button {
     outline: none;
     cursor: pointer;
     border: none;
+    font-size: 1.6rem;
+    padding: 0;
   }
 
   ::selection {

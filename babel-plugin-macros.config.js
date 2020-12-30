@@ -9,4 +9,4 @@ module.exports = {
       from: 'styled-components/macro',
     },
   },
-};
+}
