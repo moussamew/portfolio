@@ -14,12 +14,14 @@ i18n.use(LanguageDetector).init({
     fr: frenchTranslations,
     en: englishTranslations,
   },
+  ns: ['translation'],
+  defaultNS: 'translation',
   fallbackLng: Language.EN,
   interpolation: {
     escapeValue: false,
   },
   react: {
-    wait: true,
+    useSuspense: false,
   },
   detection: {
     order: ['localStorage'],

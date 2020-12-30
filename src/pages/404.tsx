@@ -1,13 +1,12 @@
 import { FunctionComponent } from 'react'
 
-import { SEO, Title, Text } from '../components'
+import { Layout, Title, Text } from '../components'
 
 const NotFoundPage: FunctionComponent = () => (
-  <div>
-    <SEO title="404 | Not found" />
+  <Layout title="404 | Not found">
     <Title>Not found</Title>
     <Text>Sorry bro!</Text>
-  </div>
+  </Layout>
 )
 
 export default NotFoundPage
