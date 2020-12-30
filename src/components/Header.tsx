@@ -13,7 +13,7 @@ const SwitchLanguage = styled.button`
 `
 
 const Header: FunctionComponent = () => {
-  const { i18n, t } = useTranslation()
+  const { i18n } = useTranslation()
 
   const changeCurrentLanguage = () => {
     i18n.changeLanguage(
@@ -25,7 +25,7 @@ const Header: FunctionComponent = () => {
     <header>
       <SwitchLanguage type="button" onClick={changeCurrentLanguage}>
         <LanguageIcon fill="currentColor" tw="mb-1 mr-1" />
-        <Text>{t('header.language')}</Text>
+        <Text value="header.language" />
       </SwitchLanguage>
     </header>
   )

@@ -44,8 +44,8 @@ const Welcome: FunctionComponent = () => {
     <Section>
       <Introduction>
         <Title>{t('home.welcome.title')}</Title>
-        <Text>{t('home.welcome.description1')}</Text>
-        <Text>{t('home.welcome.description2')}</Text>
+        <Text value="home.welcome.description1" />
+        <Text value="home.welcome.description2" />
       </Introduction>
       <ImageWrapper>
         <Img fluid={placeholderImage.childImageSharp.fluid} />
