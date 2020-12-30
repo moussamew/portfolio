@@ -1,7 +1,8 @@
 import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import frenchTranslations from './fr-FR.json'
+
 import englishTranslations from './en-US.json'
+import frenchTranslations from './fr-FR.json'
 
 export enum Language {
   FR = 'fr',

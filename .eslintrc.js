@@ -59,5 +59,24 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'import/order': [
+      2,
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        'newlines-between': 'always',
+        alphabetize: {
+          order:
+            'asc' /* sort in ascending order. Options: ['ignore', 'asc', 'desc'] */,
+          caseInsensitive: true /* ignore case. Options: [true, false] */,
+        },
+      },
+    ],
   },
 }

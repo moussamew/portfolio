@@ -1,9 +1,11 @@
 import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
 import tw, { styled } from 'twin.macro'
-import { Language } from '../i18n'
-import { Text } from '.'
+
 import LanguageIcon from '../assets/images/language.svg'
+import { Language } from '../i18n'
+
+import { Text } from '.'
 
 const SwitchLanguage = styled.button`
   ${tw`bg-transparent flex items-center

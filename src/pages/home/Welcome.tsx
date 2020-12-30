@@ -1,8 +1,9 @@
-import { FunctionComponent } from 'react'
-import Img from 'gatsby-image'
 import { useStaticQuery, graphql } from 'gatsby'
-import tw, { styled } from 'twin.macro'
+import Img from 'gatsby-image'
+import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
+import tw, { styled } from 'twin.macro'
+
 import { Title, Text } from '../../components'
 
 const Section = styled.section`

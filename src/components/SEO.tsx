@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react'
 import { Helmet } from 'react-helmet'
+
 import { useSiteMetadata } from '../hooks'
 
 interface Props {

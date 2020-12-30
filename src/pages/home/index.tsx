@@ -2,8 +2,8 @@ import { FunctionComponent } from 'react'
 
 import { Layout } from '../../components'
 
-import Welcome from './Welcome'
 import Experiences from './Experiences'
+import Welcome from './Welcome'
 
 const Home: FunctionComponent = () => (
   <Layout>

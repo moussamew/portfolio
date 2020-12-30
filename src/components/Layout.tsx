@@ -1,8 +1,10 @@
 import { FunctionComponent } from 'react'
 import { I18nextProvider } from 'react-i18next'
+
 import GlobalStyle from '../assets/styles/globalStyle'
-import { SEO, Wrapper, Header } from '.'
 import i18n from '../i18n'
+
+import { SEO, Wrapper, Header } from '.'
 
 interface Props {
   children: JSX.Element[]
