@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Language } from '../../i18n'
+import { Language } from '../i18n'
 
 const Header: FunctionComponent = () => {
   const { i18n, t } = useTranslation()

@@ -1,4 +1,5 @@
 import i18n from 'i18next'
+import LanguageDetector from 'i18next-browser-languagedetector'
 import frenchTranslations from './fr-FR.json'
 import englishTranslations from './en-US.json'
 
@@ -7,18 +8,21 @@ export enum Language {
   EN = 'en',
 }
 
-i18n.init({
+i18n.use(LanguageDetector).init({
   resources: {
     fr: frenchTranslations,
     en: englishTranslations,
   },
   fallbackLng: Language.EN,
-  lng: Language.EN,
   interpolation: {
     escapeValue: false,
   },
   react: {
     useSuspense: false,
+  },
+  detection: {
+    order: ['localStorage'],
+    caches: ['localStorage'],
   },
 })
 

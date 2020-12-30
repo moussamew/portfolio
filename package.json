@@ -16,6 +16,7 @@
     "gatsby-source-filesystem": "2.8.1",
     "gatsby-transformer-sharp": "2.9.0",
     "i18next": "19.8.4",
+    "i18next-browser-languagedetector": "6.0.1",
     "node-fetch": "2.6.1",
     "prop-types": "15.7.2",
     "react": "17.0.1",
