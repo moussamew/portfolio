@@ -4,7 +4,11 @@ import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
 import tw, { styled } from 'twin.macro'
 
-import { Title, Text } from '../../components'
+import {
+  Title,
+  TextWithTags,
+  TextWithDangerouselyInnerHtml,
+} from '../../components'
 
 const Section = styled.section`
   ${tw`flex lg:flex-row flex-col-reverse`}
@@ -44,8 +48,19 @@ const Welcome: FunctionComponent = () => {
     <Section>
       <Introduction>
         <Title>{t('home.welcome.title')}</Title>
-        <Text value="home.welcome.description1" />
-        <Text value="home.welcome.description2" />
+        <TextWithTags i18nKey="home.welcome.description1">
+          Hello, my name is Moussa, I am 24 years old and I live in Paris. I am
+          currently working at <strong>CANAL+</strong> in the Front TV team as a
+          <strong>Front-end Developer.</strong>
+        </TextWithTags>
+        <TextWithTags i18nKey="home.welcome.description2">
+          In my free time, I design web and mobile applications. I mainly work
+          around the <strong>JavaScript</strong> ecosystem and make most of my
+          applications in <strong>TypeScript.</strong>
+        </TextWithTags>
+        <TextWithDangerouselyInnerHtml>
+          {t('home.welcome.description1')}
+        </TextWithDangerouselyInnerHtml>
       </Introduction>
       <ImageWrapper>
         <Img fluid={placeholderImage.childImageSharp.fluid} />

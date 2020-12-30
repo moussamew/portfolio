@@ -1,8 +1,6 @@
-import { FunctionComponent } from 'react'
-import { I18nextProvider } from 'react-i18next'
+import { Fragment, FunctionComponent } from 'react'
 
 import GlobalStyle from '../assets/styles/globalStyle'
-import i18n from '../i18n'
 
 import { SEO, Wrapper, Header } from '.'
 
@@ -19,14 +17,14 @@ const Layout: FunctionComponent<Props> = ({
   description,
   image,
 }) => (
-  <I18nextProvider i18n={i18n}>
+  <Fragment>
     <SEO title={title} description={description} image={image} />
     <Wrapper>
       <Header />
       <main>{children}</main>
     </Wrapper>
     <GlobalStyle />
-  </I18nextProvider>
+  </Fragment>
 )
 
 export { Layout }

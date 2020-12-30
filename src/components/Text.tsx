@@ -3,17 +3,33 @@ import { Trans } from 'react-i18next'
 import tw, { styled } from 'twin.macro'
 
 interface Props {
-  value: string
+  children: string
+}
+
+interface TextWithTagsProps {
+  children: (string | JSX.Element)[]
+  i18nKey: string
 }
 
 const StyledText = styled.p`
   ${tw`mb-1 text-justify whitespace-pre-line`}
 `
 
-const Text: FunctionComponent<Props> = ({ value }) => (
+const Text: FunctionComponent<Props> = ({ children }) => (
+  <StyledText>{children}</StyledText>
+)
+
+const TextWithTags: FunctionComponent<TextWithTagsProps> = ({
+  i18nKey,
+  children,
+}) => (
   <StyledText>
-    <Trans i18nKey={value} />
+    <Trans i18nKey={i18nKey}>{children}</Trans>
   </StyledText>
 )
 
-export { Text }
+const TextWithDangerouselyInnerHtml: FunctionComponent<Props> = ({
+  children,
+}) => <StyledText dangerouslySetInnerHTML={{ __html: children }} />
+
+export { Text, TextWithTags, TextWithDangerouselyInnerHtml }
