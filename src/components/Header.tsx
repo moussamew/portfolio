@@ -9,7 +9,7 @@ import { Text } from '.'
 
 const SwitchLanguage = styled.button`
   ${tw`bg-transparent flex items-center
-  hover:text-blueDark mt-2 `}
+  hover:text-blueDark mt-2`}
 `
 
 const Header: FunctionComponent = () => {

@@ -32,6 +32,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: unset;
   }
 
+  i {
+    ${tw`text-blueDark`}
+  }
+
   img {
     border-radius: 0.5rem;
   }
@@ -45,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    ${tw`bg-yellow`}
+    ${tw`bg-blue text-white`}
   }
 `
 

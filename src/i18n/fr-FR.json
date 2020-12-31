@@ -5,12 +5,30 @@
     },
     "home": {
       "welcome": {
-        "title": "Bienvenue ! 👋",
+        "pageTitle": "Bienvenue ! 👋",
         "description1": "Salut moi c'est Moussa, j'ai 24 ans et j'habite à Paris. Je travaille actuellement chez <strong>CANAL+</strong> au sein de l'équipe Front TV en tant que <strong>Développeur Front-End.</strong>",
         "description2": "Sur mon temps libre, je conçois et développe des applications web et mobile. Je travaille surtout autour de l'écosystème <strong>JavaScript</strong> et développe la plupart de mes applications en <strong>TypeScript.</strong>"
       },
       "experiences": {
-        "subtitle": "Expériences"
+        "sectionTitle": "Mes expériences",
+        "canalplus": {
+          "title": "Développeur Front-End chez CANAL+",
+          "date": "<i>sept. 2019 - Aujourd'hui</i>",
+          "description": " Amélioration en continue du player CANAL+. Passage et accompagnement progressif du code JavaScript en TypeScript. Réalisation de tests unitaires, d'intégration et end-to-end.",
+          "stack": "Stack : React, JavaScript, TypeScript, Redux, Jest, testing-library, Lerna, Nightwatch."
+        },
+        "tictactrip": {
+          "title": "Développeur Front-End chez Tictactrip",
+          "date": "<i>avr. 2019 - sept. 2019</i>",
+          "description": "Création de pages statiques et dynamiques. Amélioration des interfaces graphiques du site. Mise en place de test utilisateur. Débogage et optimisation des modules JavaScript existants.",
+          "stack": "Stack : React.js, JavaScript, Redux, Styled-Component, Jest, Enzyme"
+        },
+        "seaclick": {
+          "title": "Développeur Full-Stack chez Seaclick (maintenant Leisly)",
+          "date": "<i>avr. 2018 - sept. 2018</i>",
+          "description": "Optimisation de l'expérience utilisateur (UX). Création de composants design (UI). Développement de scripts d'automatisation et étude des robots d'indexation.",
+          "stack": "Stack : Vue, Laravel, JavaScript, PHP7, SCSS, Blade."
+        }
       }
     }
   }

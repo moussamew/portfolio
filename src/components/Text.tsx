@@ -7,7 +7,7 @@ interface TextProps {
 }
 
 interface TextWithTagsProps {
-  children: (string | JSX.Element)[]
+  children: (string | JSX.Element)[] | JSX.Element
   i18nKey: string
 }
 

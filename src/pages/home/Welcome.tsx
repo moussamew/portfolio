@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
 import tw, { styled } from 'twin.macro'
 
-import { Title, TextWithTags } from '../../components'
+import { PageTitle, TextWithTags } from '../../components'
 
 const Section = styled.section`
   ${tw`flex lg:flex-row flex-col-reverse`}
@@ -15,12 +15,7 @@ const Introduction = styled.div`
 `
 
 const ImageWrapper = styled.div`
-  ${tw`lg:flex lg:w-1/2 justify-center mt-2`}
-
-  @media (min-width: 640px) {
-    .gatsby-image-wrapper {
-      width: 350px;
-    }
+  ${tw`md:w-30 w-full m-auto mt-1`}
   }
 `
 
@@ -28,7 +23,7 @@ const query = graphql`
   query {
     placeholderImage: file(relativePath: { eq: "moussa.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300, quality: 100) {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -43,7 +38,7 @@ const Welcome: FunctionComponent = () => {
   return (
     <Section>
       <Introduction>
-        <Title>{t('home.welcome.title')}</Title>
+        <PageTitle>{t('home.welcome.pageTitle')}</PageTitle>
         <TextWithTags i18nKey="home.welcome.description1">
           Hello, my name is Moussa, I am 24 years old and I live in Paris. I am
           currently working at <strong>CANAL+</strong> in the Front TV team as a

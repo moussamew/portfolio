@@ -5,12 +5,30 @@
     },
     "home": {
       "welcome": {
-        "title": "Hey! Welcome! 👋",
+        "pageTitle": "Hey! Welcome! 👋",
         "description1": "Hello, my name is Moussa, I am 24 years old and I live in Paris. I am currently working at <strong>CANAL+</strong> in the Front TV team as a <strong>Front-end Developer.</strong>",
         "description2": "In my free time, I design web and mobile applications. I mainly work around the <strong>JavaScript</strong> ecosystem and make most of my applications in <strong>TypeScript.</strong>"
       },
       "experiences": {
-        "subtitle": "Experiences"
+        "sectionTitle": "My experiences",
+        "canalplus": {
+          "title": "Front-End Developer at CANAL+",
+          "date": "<i>sept. 2019 - Today</i>",
+          "description": " Continuous improvement of the CANAL+ player. Progressive transition of the codebase from JavaScript to TypeScript. Unit, integration and end-to-end testing.",
+          "stack": "Stack: React, JavaScript, TypeScript, Redux, Jest, testing-library, Lerna, Nightwatch."
+        },
+        "tictactrip": {
+          "title": "Front-End Developer at Tictactrip",
+          "date": "<i>apr. 2019 - sept. 2020</i>",
+          "description": "Creation of static and dynamic pages. Improvement of the graphical interfaces of the site. Implementation of user tests. Debugging and optimization of existing JavaScript modules.",
+          "stack": "Stack: React, JavaScript, Redux, Styled-Component, Jest, Enzyme."
+        },
+        "seaclick": {
+          "title": "Full-Stack Developer at Seaclick (now Leisly)",
+          "date": "<i>apr. 2018 - sept. 2018</i>",
+          "description": "Optimization of the user experience (UX). Creation of design components (UI). Development of automation scripts and study of indexing robots.",
+          "stack": "Stack: Vue, Laravel, JavaScript, PHP7, SCSS, Blade."
+        }
       }
     }
   }
