@@ -1,0 +1,12 @@
+{
+  "tiles": [
+    {
+      "imagePrimaryUrl": "https://thumb.canalplus.pro/http/unsafe/690x250/img-hapi.canalplus.pro/ServiceImage/ImageID/94785605",
+      "deepLinkParam": "https://www.canalplus.com/cinema/la-famille-addams/h/12857407_50001"
+    },
+    {
+      "imagePrimaryUrl": "https://thumb.canalplus.pro/http/unsafe/690x250/img-hapi.canalplus.pro/ServiceImage/ImageID/97335609",
+      "deepLinkParam": "https://www.canalplus.com/cinema/magic-kids/h/14009687_50001?autoplay=true&test=false"
+    }
+  ]
+}
